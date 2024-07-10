@@ -1,4 +1,4 @@
-# Telegram Bot for receives offers t.me/it_prog_chat
+# Telegram Bot for receives offers for [@it_prog_chat](http://t.me/it_prog_chat)
 ## This is a simple bot that forwards chat suggestions to the admin. This makes it easier for the admin to view and understand the wishes of chat participants. 
 ## How to start
 ### First install all gem
