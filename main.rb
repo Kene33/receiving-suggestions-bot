@@ -63,7 +63,8 @@ Telegram::Bot::Client.run(token) do |bot|
     elsif message.sticker
       task = Concurrent::ScheduledTask.new(1) {
         admins.each do |ids|
-          bot.api.send_message(chat_id: ids, text: "Отправьте текст или фото. Не отправляйте стикеры.")
+          bot.api.send_message(chat_id: ids, text: "Отправьте текст или фото. Не отправляйте стикеры.") # При желании можете закоментировать эту строку и раскоментировать следующию. Тогда бот будет пересылает еще и стикеры.
+          # bot.api.send_sticker(chat_id: ids, sticker: message.sticker.file_id)
         end}
       pool.post { task.execute }
 
